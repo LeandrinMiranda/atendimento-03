@@ -14,6 +14,10 @@
 </head>
 
 <body>
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
     <header>
         <div class="menu">
             <a href="#" class="logo">Atendimento</a>
@@ -201,8 +205,54 @@
         </div>
     </section>
 
+    <section class="conteudo-4">
+        <div class="img-conteudo-4">
+            <img src="img/banner-safra.png" alt="">
+        </div>
+        <div class="conteu-desc-4">
+            <i class="ph ph-whatsapp-logo"></i>
+            <h1>FAÇA UMA ANÁLISE GRATUITA <br> PELO WHATSAPP</h1>
+            <p>+ de 90 % dos Veículos Financiados no Brasil Possuem Juros Abusivos! Você tem um Veículo Financiado? Veja
+                o Valor Real de Suas Parcelas Sem Juros Abusivos!</p>
+            <br> <br>
+            <a href="https://wa.link/4u47so" class="burron-conteudo-4">
+                Fale Conosco
+            </a>
+        </div>
+    </section>
+
+    <div class="img-main">
+        <img src="img/captura-de-tela-2024-01-05-091601-m6LraXPN35fgPK30-768x226.jpg" alt="">
+    </div>
+    <div class="container">
+        <div class="steps">
+            <h1>Como Financiar Seu Veículo</h1>
+            <p>São apenas 3 passos para financiar seu veículo</p>
+            <div class="step">
+                <h2>1. Selecione o modelo de veículo</h2>
+                <p>O primeiro passo é selecionar o modelo de veículo. Utilize nosso quiz para auxiliá-lo ou busque uma
+                    de nossas revendas parceiras para encontrar o carro ideal para você.</p>
+            </div>
+            <div class="step">
+                <h2>2. Simule as parcelas</h2>
+                <p>Utilize o nosso simulador no site, ou vá até uma de nossas revendas parceiras para simular as
+                    condições do seu financiamento e realizar a análise do seu crédito.</p>
+            </div>
+            <div class="step">
+                <h2>3. Compareça a uma revenda</h2>
+                <p>Receba o resultado da análise e vá até a revenda escolhida com sua simulação em mãos (impressa ou
+                    digital) para efetivar o seu contrato.</p>
+            </div>
+        </div>
+        <div class="quiz">
+            <h2>Ainda não sabe qual veículo escolher?</h2>
+            <p>Nós te ajudamos a encontrar o veículo ideal. Responda algumas perguntas do nosso quiz</p>
+            <a href="https://wa.link/4u47so">Responder →</a>
+        </div>
+    </div>
+
     <footer>
-        <p>Todos os direitos Reservados - 2024</p>
+        <p>CNPJ: 11.266.189/0001-85 <br><br> <a href="politica.html">Politica De Privacidade>a></p>
     </footer>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -218,6 +268,8 @@
         <i style="margin-top:16px" class="fa fa-whatsapp"></i>
     </a>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
     <script>
         function toggleMenu() {
             const menu = document.querySelector('.categoria');
@@ -225,6 +277,127 @@
         }
     </script>
 
-</body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const loader = document.getElementById('loader');
+            const content = document.getElementById('content');
 
+            // Mostra o loader enquanto a página está carregando
+            loader.style.display = 'flex'; // ou 'block' dependendo do seu estilo
+
+            // Função para esconder o loader e mostrar o conteúdo
+            function hideLoader() {
+                loader.style.display = 'none';
+                content.style.display = 'block';
+            }
+
+            // Executa hideLoader após um atraso de 1 segundo (simulando carregamento)
+            setTimeout(hideLoader, 1000); // ajuste conforme necessário
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Função para aplicar animações após o carregamento completo
+            function applyAnimations() {
+                const sectionsRight = document.querySelectorAll('.section-right');
+                const sectionsLeft = document.querySelectorAll('.section-left');
+
+                sectionsRight.forEach(section => {
+                    section.classList.add('visible');
+                });
+
+                sectionsLeft.forEach(section => {
+                    section.classList.add('visible');
+                });
+            }
+
+            // Executa applyAnimations após o carregamento completo da página
+            window.onload = applyAnimations;
+        });
+
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const track = document.querySelector('.carousel-track');
+            const slides = Array.from(track.children);
+            const nextButton = document.querySelector('.carousel-button-right');
+            const prevButton = document.querySelector('.carousel-button-left');
+
+            const slideWidth = slides[0].getBoundingClientRect().width;
+
+            // Arrange the slides next to one another
+            const setSlidePosition = (slide, index) => {
+                slide.style.left = slideWidth * index + 'px';
+            };
+            slides.forEach(setSlidePosition);
+
+            const moveToSlide = (track, currentSlide, targetSlide) => {
+                track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+                currentSlide.classList.remove('current-slide');
+                targetSlide.classList.add('current-slide');
+            };
+
+            // When I click left, move slides to the left
+            prevButton.addEventListener('click', e => {
+                const currentSlide = track.querySelector('.current-slide');
+                const prevSlide = currentSlide.previousElementSibling;
+
+                if (prevSlide) {
+                    moveToSlide(track, currentSlide, prevSlide);
+                }
+            });
+
+            // When I click right, move slides to the right
+            nextButton.addEventListener('click', e => {
+                const currentSlide = track.querySelector('.current-slide');
+                const nextSlide = currentSlide.nextElementSibling;
+
+                if (nextSlide) {
+                    moveToSlide(track, currentSlide, nextSlide);
+                }
+            });
+        });
+
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const links = document.querySelectorAll('a[href^="#"]');
+
+            for (const link of links) {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+        });
+
+    </script>
+
+    <script>
+        function acceptCookies() {
+            document.getElementById('cookie-banner').style.display = 'none';
+            sessionStorage.setItem('acceptedCookies', 'true');
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            if (!sessionStorage.getItem('acceptedCookies')) {
+                setTimeout(function () {
+                    var cookieBanner = document.getElementById('cookie-banner');
+                    if (cookieBanner) {
+                        cookieBanner.style.display = 'flex';
+                    }
+                }, 3000); // Show after 5 seconds
+            }
+        });
+
+    </script>
+</body>
 </html>
