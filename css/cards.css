@@ -11,7 +11,7 @@
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 5px #00003cff;
+    box-shadow: 0 0 5px #0baf8e;
 }
 
 .bloco i {
@@ -28,7 +28,7 @@
 .bloco .button-bloco {
     display: flex;
     justify-content: center;
-    background-color: #00003cff;
+    background-color: #0baf8e;
     color: #fff;
     text-decoration: none;
     font-weight: 600;
@@ -38,7 +38,7 @@
 }
 
 .button-bloco:hover {
-    background-color: rgba(0, 0, 60, 0.838);
+    background-color: #0baf8ec5;
 }
 
 .carousel {
@@ -76,7 +76,7 @@
         background-color: #fff;
         padding: 20px;
         border-radius: 10px;
-        border: 2px solid #00003cff;
+        border: 2px solid #0baf8e;
         box-shadow: none;
     }
 
