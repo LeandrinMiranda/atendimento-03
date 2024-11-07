@@ -177,8 +177,8 @@
         </div>
     </section>
 
-    <div id="quemsomos" style="max-width:1200px" margim: auto; padding: 20px;>
-        <h2>
+    <div id="quemsomos" style="max-width:1200px; margin: auto; padding: 20px; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 70vh;">
+        <h2 style="font-size: 1.2rem; color: #333131; line-height: 25px;">
             A TS CONSIGNADO pertence a thais  CNPJ 55.958.092/0001-09, localizada à Rua Sineval caviquioli, nº 273, 
             SP,ITANHAÉM /SP, CEP: 11740-000  é uma Assessoria  que facilita o acesso de clientes a empréstimos consignados. 
             Atuamos como correspondente bancário de instituições financeiras, atividade regulada pelo Banco Central do Brasil, 
@@ -240,129 +240,6 @@
             const menu = document.querySelector('.categoria');
             menu.classList.toggle('show');
         }
-    </script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const loader = document.getElementById('loader');
-            const content = document.getElementById('content');
-
-            // Mostra o loader enquanto a página está carregando
-            loader.style.display = 'flex'; // ou 'block' dependendo do seu estilo
-
-            // Função para esconder o loader e mostrar o conteúdo
-            function hideLoader() {
-                loader.style.display = 'none';
-                content.style.display = 'block';
-            }
-
-            // Executa hideLoader após um atraso de 1 segundo (simulando carregamento)
-            setTimeout(hideLoader, 1000); // ajuste conforme necessário
-        });
-
-        document.addEventListener('DOMContentLoaded', function () {
-            // Função para aplicar animações após o carregamento completo
-            function applyAnimations() {
-                const sectionsRight = document.querySelectorAll('.section-right');
-                const sectionsLeft = document.querySelectorAll('.section-left');
-
-                sectionsRight.forEach(section => {
-                    section.classList.add('visible');
-                });
-
-                sectionsLeft.forEach(section => {
-                    section.classList.add('visible');
-                });
-            }
-
-            // Executa applyAnimations após o carregamento completo da página
-            window.onload = applyAnimations;
-        });
-
-    </script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const track = document.querySelector('.carousel-track');
-            const slides = Array.from(track.children);
-            const nextButton = document.querySelector('.carousel-button-right');
-            const prevButton = document.querySelector('.carousel-button-left');
-
-            const slideWidth = slides[0].getBoundingClientRect().width;
-
-            // Arrange the slides next to one another
-            const setSlidePosition = (slide, index) => {
-                slide.style.left = slideWidth * index + 'px';
-            };
-            slides.forEach(setSlidePosition);
-
-            const moveToSlide = (track, currentSlide, targetSlide) => {
-                track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
-                currentSlide.classList.remove('current-slide');
-                targetSlide.classList.add('current-slide');
-            };
-
-            // When I click left, move slides to the left
-            prevButton.addEventListener('click', e => {
-                const currentSlide = track.querySelector('.current-slide');
-                const prevSlide = currentSlide.previousElementSibling;
-
-                if (prevSlide) {
-                    moveToSlide(track, currentSlide, prevSlide);
-                }
-            });
-
-            // When I click right, move slides to the right
-            nextButton.addEventListener('click', e => {
-                const currentSlide = track.querySelector('.current-slide');
-                const nextSlide = currentSlide.nextElementSibling;
-
-                if (nextSlide) {
-                    moveToSlide(track, currentSlide, nextSlide);
-                }
-            });
-        });
-
-    </script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const links = document.querySelectorAll('a[href^="#"]');
-
-            for (const link of links) {
-                link.addEventListener('click', function (e) {
-                    e.preventDefault();
-
-                    const targetId = this.getAttribute('href').substring(1);
-                    const targetElement = document.getElementById(targetId);
-
-                    window.scrollTo({
-                        top: targetElement.offsetTop,
-                        behavior: 'smooth'
-                    });
-                });
-            }
-        });
-
-    </script>
-
-    <script>
-        function acceptCookies() {
-            document.getElementById('cookie-banner').style.display = 'none';
-            sessionStorage.setItem('acceptedCookies', 'true');
-        }
-
-        document.addEventListener('DOMContentLoaded', function () {
-            if (!sessionStorage.getItem('acceptedCookies')) {
-                setTimeout(function () {
-                    var cookieBanner = document.getElementById('cookie-banner');
-                    if (cookieBanner) {
-                        cookieBanner.style.display = 'flex';
-                    }
-                }, 3000); // Show after 5 seconds
-            }
-        });
-
     </script>
 </body>
 </html>
