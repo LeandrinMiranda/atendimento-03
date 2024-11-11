@@ -13,11 +13,11 @@
     overflow-y: hidden;
     width: 50%;
     height: 100vh;
-    margin-top: 10rem;
+    margin-top: 5rem;
 }
 
 .desc-conteudo-1 h2 {
-    font-size: 1.5rem;
+    font-size: 3rem;
     font-weight: 500;
 }
 
@@ -28,7 +28,7 @@
 }
 
 .button-conteudo-1 {
-    background-color: #0baf8e;
+    background-color: #FF6200;
     color: #fff;
     text-decoration: none;
     font-weight: 600;
@@ -47,8 +47,8 @@
 
 /* Conteudo - 2 */
 .conteudo-2 {
-    background-color: #0baf8e;
-    margin-top: -15rem;
+    background-color: #FF6200;
+    margin-top: -10rem;
     height: auto;
 }
 
@@ -85,7 +85,7 @@
 
 .bloco-conteudo-2 a {
     text-decoration: none;
-    color: #0baf8e;
+    color: #FF6200;
     font-weight: 600;
 }
 
@@ -110,7 +110,7 @@
 
 .bloco-conteudo-3 {
     padding: 30px;
-    background-color: #0baf8e;
+    background-color: #FF6200;
     color: #fff;
 }
 
@@ -134,6 +134,11 @@
     overflow: hidden;
 }
 
+.wave2 {
+    background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwMCIgaGVpZ2h0PSIxNTAiIHZpZXdCb3g9IjAgMCAxNjAwIDE1MCIgdmlzaWJpbGl0eT0idmlzaWJsZSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2MDAsODBWMTUwSDBWNDVjMTcwLDBsMjM1LDc1bDExNywxMFsxNjYsMFs1MCwwXTY3LTM1YzA4LTggNTgtNSAxMTcsMjBMOTgwLDI1MGgyMDBsMTE3LTIwYzU5LTUsMTI1LTQyLDE3MS0xMDBsMjM1LTY1WiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cg==') no-repeat;
+    background-size: cover;
+}
+
 /* Conteudo - 4 */
 .conteudo-4 {
     display: flex;
@@ -155,7 +160,7 @@
 .conteu-desc-4 {
     width: 40%;
     padding: 50px;
-    background-color: #cc0000ff;
+    background-color: #FF6200;
 }
 
 .conteu-desc-4 i {
@@ -218,7 +223,7 @@
 }
 
 .steps h1 {
-    color: #cc0000ff;
+    color: #FF6200;
     font-size: 1.5em;
 }
 
@@ -232,7 +237,7 @@
 }
 
 .steps h2 {
-    color: #cc0000ff;
+    color: #FF6200;
     font-size: 1.2em;
     margin-bottom: 5px;
 }
@@ -245,7 +250,7 @@
 .quiz {
     flex: 1 1 30%;
     margin: 20px;
-    background: #cc0000ff;
+    background: #FF6200;
     border-radius: 8px;
     color: #ffffff;
     padding: 20px;
@@ -270,7 +275,7 @@
 .quiz a {
     color: #ffffff;
     text-decoration: none;
-    background: #cc0000ff;
+    background: #FF6200;
     padding: 10px 20px;
     border-radius: 4px;
     text-align: center;
@@ -278,7 +283,7 @@
 }
 
 footer {
-    background-color: #0baf8e;
+    background-color: #FF6200;
     padding: 10px;
     color: #fff;
     text-align: center;
@@ -304,7 +309,7 @@ footer {
     .quiz {
         width: 100%;
         margin: 20px;
-        background: #cc0000ff;
+        background: #FF6200;
         border-radius: 8px;
         color: #ffffff;
         padding: 20px;
@@ -328,18 +333,18 @@ footer {
         flex-direction: column;
         align-items: center;
         margin-top: 0rem;
-        gap: 0rem;
+        gap: 1rem;
     }
 
     .desc-conteudo-1 {
         overflow-y: hidden;
         width: 100%;
-        height: auto;
+        height: 50vh;
         margin-top: 1rem;
     }
 
     .desc-conteudo-1 h2 {
-        font-size: 1.5rem;
+        font-size: 2.5rem;
         font-weight: 500;
     }
 
@@ -349,6 +354,17 @@ footer {
         font-weight: 500;
     }
 
+
+    .button-conteudo-1 {
+        background-color: #FF6200;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        padding: 20px 50px;
+        border-radius: 5px;
+    }
+
+
     .img-conteudo-1 {
         width: 100%;
         height: 100%;
@@ -357,14 +373,13 @@ footer {
     }
 
     .img-conteudo-1 img {
-        width: 100%;
+        width: 80%;
         height: auto;
-        margin-top: 20px;
     }
 
     /* Conteudo - 2 */
     .conteudo-2 {
-        background-color: #0baf8e;
+        background-color: #FF6200;
         margin-top: 5rem;
         height: auto;
     }
@@ -404,7 +419,7 @@ footer {
 
     .bloco-conteudo-2 a {
         text-decoration: none;
-        color: #0baf8e;
+        color: #FF6200;
         font-weight: 600;
     }
 
@@ -444,7 +459,7 @@ footer {
         width: 100%;
         height: auto;
         padding: 50px;
-        background-color: #0baf8e;
+        background-color: #FF6200;
     }
 
     .conteu-desc-4 h1 {
